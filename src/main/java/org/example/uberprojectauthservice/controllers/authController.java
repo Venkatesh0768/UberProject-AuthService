@@ -69,6 +69,7 @@ public class authController {
 
     @GetMapping("/validate")
     public ResponseEntity<?> getToken(HttpServletRequest request , HttpServletResponse response){
+        System.out.println("this is working");
          Cookie[] cookies = request.getCookies();
         if(cookies != null) {
             for (Cookie cookie : cookies) {
