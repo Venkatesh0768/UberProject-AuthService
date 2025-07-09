@@ -2,8 +2,8 @@ package org.example.uberprojectauthservice.services;
 
 import org.example.uberprojectauthservice.dto.PassengerDto;
 import org.example.uberprojectauthservice.dto.PassengerSignupRequestDto;
-import org.example.uberprojectauthservice.models.Passenger;
 import org.example.uberprojectauthservice.repository.PassengerRepository;
+import org.example.uberprojectentityservice.models.Passenger;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class AuthService {
         Passenger passenger = Passenger.builder()
                 .email(passengerSignupRequestDto.getEmail())
                 .name(passengerSignupRequestDto.getName())
-                .password(bCryptPasswordEncoder.encode(passengerSignupRequestDto.getPassword())) // TODO: Encrypt the password
+                .password(bCryptPasswordEncoder.encode(passengerSignupRequestDto.getPassword()))
                 .phoneNumber(passengerSignupRequestDto.getPhoneNumber())
                 .build();
 

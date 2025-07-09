@@ -3,9 +3,7 @@ package org.example.uberprojectauthservice.controllers;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.coyote.Response;
 import org.example.uberprojectauthservice.dto.AuthRequestDto;
-import org.example.uberprojectauthservice.dto.AuthResponseDto;
 import org.example.uberprojectauthservice.dto.PassengerDto;
 import org.example.uberprojectauthservice.dto.PassengerSignupRequestDto;
 import org.example.uberprojectauthservice.services.AuthService;
@@ -20,10 +18,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/v1/auth")
